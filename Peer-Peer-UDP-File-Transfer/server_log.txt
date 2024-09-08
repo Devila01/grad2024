@@ -1,0 +1,8 @@
+Receiver: received download.png
+Receiver: sent an ACK-1
+Receiver: received PKT1.0
+Receiver: sent an ACK1.0
+Receiver: received PKT0.0
+Receiver: sent an ACK0.0
+Receiver: file transfer completed
+Receiver: number of bytes received: 1891 bytes

@@ -1,0 +1,5 @@
+Date, Sprint #, Standup #, Name, What did you work on since the last standup?, What do you commit to next?, When do you think you'll be done?, Do you have any blockers?
+Nov 28th,1,1,Safa,I researched ways to add a sound to a Java file, I will work on finding the desired sound,End of Today,None
+Nov 28th,1,1,Jonathan,N/A,I will work on converting ThreeMusketeers.java to fit the specifications of the random mode option.,End of Today,Additional methods will be needed for the functionality of this feature
+Nov 28th,1,1,Zoya,N/A,Want to implment the change turn color task using the Composite Design Pattern,End of Today,None
+Nov 28th,1,1,Sandra,N/A,Want to create a JavaFX window which the program can launch which contains a timer that counts down,End of Today,launching a JavaFX window from a non-JavaFX class is more difficult than anticipated and I could not get the window to actually launch even though I think I implemented the timer functionality.

@@ -1,0 +1,2 @@
+Story Number, Name, Owner, Priority, Estimate, As a, I want, So that, IMPL Details
+User Story 2.5, Timer, Sandra, 1 , 3, Developer , To force the player to make a move within a certain time period. , The game is more interesting and challenging. , Use the Observer Pattern to update the items on the board once the timer has stopped.

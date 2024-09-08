@@ -1,0 +1,6 @@
+Story Reviewed, Name, Reviewer, Pull Request Link, Brief Summary of Comments
+DEV-2.2,GUI Username, Safa,,Functionality is cool and it properly remembers users and their stats based on their Username
+DEV-2.4,Redo function,Jonathan,https://github.com/UTMCSC207/assignment3-javadoc-tor-s/pull/6,Function is extremely well implemented and shows no obvious bugs or issues.
+DEC-2.3,Game Sound Effect,Zoya,https://github.com/UTMCSC207/assignment3-javadoc-tor-s/pull/7,Code is clean and works as required. Also now functions for all game modes including greedy agent so it does not seem to have any flaws.
+DEV-2.2,GUI Username,Sandra,https://github.com/UTMCSC207/assignment3-javadoc-tor-s/pull/5,Everything here looks great and there's no conflicts that need to be resolved. Merging this with master.
+,,,,

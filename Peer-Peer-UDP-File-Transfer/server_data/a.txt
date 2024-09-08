@@ -1,0 +1,293 @@
+Skip navigation
+Courses
+Python Library 
+Log in
+Create free account
+Back to articles list
+Articles
+20th May 2022 10 minutes read
+How to Sort a List of Tuples in Python
+Author's photo
+Emad Bin Abid
+Python
+Sorting
+Are you confused about sorting lists of tuples in Python? Want to know how to sort them efficiently? This introduction will cover everything you need to know to master this type of sorting.
+
+Lists and tuples are essential data structures in Python. In several cases, you may have to sort a list of tuples. This post will teach you how to utilize the sorted() function and the sort() method and the distinctions between the two. You’ll learn how to sort tuples in Python and see how optional parameters like key and reverse make Python's sorting capabilities more versatile.
+
+If you’re starting with the Python programming language, LEARNPYTHON is an easy way to start your journey. We recommend checking out THIS PYTHON TRACK ON PYTHON’S BUILT-IN ALGORITHMS if you're unfamiliar with Python methods. On the other hand, if you have some Python knowledge and want to enhance your coding skills, we recommend THIS COURSE ON PYTHON DATA STRUCTURES.
+
+For now, let's dive right into the fundamentals of sorting a list of tuples in Python.
+
+Initializing Lists and Tuples
+First, what is a list? It is easy to get lists confused with arrays if you are a beginner. However, LISTS AND ARRAYS ARE FUNDAMENTALLY DIFFERENT DATA STRUCTURES. An array is a fixed-length data structure, whereas a list is a variable-length data structure that can be resized.
+
+In Python, lists are mutable, which means they may be modified. They may hold any sort of data, including strings, tuples, and sets. (Check out this article to LEARN MORE ABOUT THE DIFFERENCES BETWEEN LISTS, TUPLES, AND SETS.) For this article, we will only utilize lists of tuples.
+
+There are two ways of initializing an empty list. First, you can specify a set of square brackets without any component values; this declares a list with no values. An example of this syntax is:
+
+# Method 1
+lst = []
+We can add some default values between our square brackets. Python lists allow us to have any number of items of different types:
+
+jobs = ['Software Engineer','Data Analyst', 15, True]
+In the example above, we’ve declared the list object jobs with four initial values: ‘Software Engineer’ and ‘Data Analyst’ (stored as strings), 15 (an integer), and the Boolean value True.
+
+One other way to initialize an empty list in Python is to use the list() constructor. Here’s an example of the list() constructor in action:
+
+# Method 2
+lst = list()
+The list() constructor takes a single optional argument called iterable. If no parameter is passed to the list constructor, the constructor returns an empty list. If an iterable is passed, the constructor returns a list of iterable items.
+
+Both approaches yield the same result: an empty list. There are no guidelines for when either of these approaches should be used. Because it is more concise, the blank square brackets [] approach is usually preferred.
+
+Now, let’s understand what tuples are in Python.
+
+Tuples, like lists, are data structures with an ordered series of zero or more entries. The primary distinction between tuples and lists is that tuples cannot be modified (they are immutable); lists  are mutable, as mentioned before.
+
+A sequence of comma-separated values is used to initialize a tuple with values. There are two ways to initialize an empty tuple, just like there are two ways to create a list. As you can see, these initialization methods are quite similar:
+
+# Method 1
+tup = ()
+ 
+# Method 2
+tup = tuple()
+It's important to remember that you'll need a trailing comma after your item if you wish to generate a tuple with only one value:
+
+# Tuple with 1 element
+tup = (1, )
+Understanding the sorted() Function
+Now let’s take a look at sorting in Python.
+
+Sorting a list in Python can easily be done using sorted(). The sorted() function returns a list with sorted elements in ascending or descending order. The syntax for this function is:
+
+sorted(list, key=..., reverse=...)
+Note that key and reverse are two optional parameters:
+
+reverse: If this is set to “True”, the sorted list will be reversed or sorted in descending order.
+key: A function that acts as a kind of comparison key.
+Understanding the sort() Method
+The sort() method sorts list items in ascending (default) or descending order.
+
+The syntax of the sort() method is:
+
+list.sort(key=..., reverse=...)
+By default, the reverse argument is set to False; the method will sort the list in ascending order. The basic distinction between sort() and sorted() is that the sort() function sorts the list in place, i.e. it modifies the list itself and returns a None value. The sorted() function creates a copy of the original list, sorts it, and returns this new list, leaving the original list unmodified.
+
+Let’s now dive into sorting lists of tuples in Python.
+
+Sorting a List of Tuples with the sorted() Function
+Let’s look at an example to understand how to sort tuples in Python. Consider the following list of tuples:
+
+sample = [(2, 4, 3), (3, 5, 7), (1, 0, 1)]
+Now, let’s apply the sorted() function:
+
+print(sorted(sample))
+ 
+# Output: [(1, 0, 1), (2, 4, 3), (3, 5, 7)]
+The order of the tuples in the list has altered, as you can see.
+
+The sorted() method sorts tuples by default, using the first item in each tuple. As a result, the sorted list's first tuple begins with 0, the second with 2, and the third with 3.
+
+Let’s see what happens if each tuple's first element is the same:
+
+sample = [(1, 4, 3), (1, 5, 7), (1, 0, 1)]
+print(sorted(sample))
+ 
+# Output: [(1, 0, 1), (1, 4, 3), (1, 5, 7)]
+The second element is the next sorting criteria used by the sorted() function.
+
+If all the tuples in the list have the same second element, the tuples are sorted based on the third element. If the first, second, and third elements are the same, it uses the fourth, and so on.
+
+Sorting a List of Tuples with the sort() Method
+The sort() method can also be used to sort tuples in Python. Starting with the initial list of tuples:
+
+sample = [(2, 4, 3), (3, 5, 7), (1, 0, 1)]
+sample.sort()
+print(sample) # Output: [(1, 0, 1), (2, 4, 3), (3, 5, 7)]
+Note that the output is the same whether you use sort() or sorted(). However, sort() changes the object itself, while sorted() returns a sorted copy of the list.
+
+Sorting a List by the Second Element of the Tuple
+If you specifically want to sort a list of tuples by a given element, you can use the sort() method and specify a lambda function as a key. Unfortunately, Python does not allow you to specify the index of the sorting element directly. Instead, a function must be defined inside the key parameter, which helps the sort() method identify which index to choose. The lambda function allows you to specify a custom comparator function in the sort() method.
+
+For example:
+
+sample = [('Jack', 76), ('Beneth', 78), ('Cirus', 77), ('Faiz', 79)]
+sample.sort(key=lambda a: a[1])
+print(sample)
+After writing the above code (which instructs Python to sort list of tuples by the second element), the output will appear as :
+
+# Output: [(‘Jack’, 76), (‘Cirus’, 77), (‘Beneth’, 78), (‘Faiz’, 79)]
+Python also allows you to sort lists alphabetically, but that is outside the scope of this article. However, we recommend checking out this article to LEARN MORE ABOUT SORTING LISTS ALPHABETICALLY.
+
+Sorting a List of Tuples in Reverse Order
+Python allows you to specify the order of sorting on your list. Therefore, we can simply use the sort() method to sort a list. First, we will take an unsorted list of tuples and then call the sort() method. The sort() method will change the order from increasing (ascending) to decreasing (descending) when we pass the parameter reverse=True as an argument.
+
+Let’s use an example to see how to sort a list in descending order using the reverse argument:
+
+sample = [(1, 0, 0), (4, 1, 2), (4, 2, 5), (1, 2, 1)]
+sample.sort(reverse = True)
+print(sample)
+ 
+# Output : [(4, 2, 5), (4, 1, 2), (1, 2, 1), (1, 0, 0)]
+We can also sort a list of tuples based on the second element in reverse order:
+
+sample = [('f', 90), ('g', 84), ('d', 92), ('a', 96)]
+sample.sort(key = lambda i:i[1], reverse = True)
+print(sample)
+ 
+# Output : [('a', 96), ('d', 92), ('f', 90), ('g', 84)]
+Using sorted() Without a lambda Function
+In the previous example, we passed a lambda function to the optional argument key of the sort() method. lambda is a function, so we should be able to pass a normal function to the key argument. We can design a function that mimics the inline functionality of the lambda function.
+
+Let’s define a function called second_item(), which takes a tuple as a parameter and returns the second item of the tuple.
+
+def second_item(data):
+    return data[1]
+And now we will call the sorted() function and pass the second_item function we had defined earlier to the key argument:
+
+sample = [(1, 7, 3), (4, 9, 6), (7, 3, 9)]
+sample.sort(key = select_item)
+print(sample)
+ 
+# Output : [(7, 3, 9), (1, 7, 3), (4, 9, 6)]
+Comparing the previous section’s results shows that our result is indeed correct. Visit this article to TAKE A DEEPER DIVE INTO CUSTOM PYTHON SORT FUNCTIONS.
+
+Sorting a List of Tuples Using itemgetter
+Another alternative to using lambda or passing a custom function into the key parameter is to use the itemgetter() function from the Python operator module. Before applying the function, let’s look at how it works:
+
+from operator import itemgetter
+ 
+print(itemgetter(1)((2, 5, 3)))
+ 
+# Output : 5
+The itemgetter() function returns the item based on the index (in this case, 1) passed onto it. Now let’s use the itemgetter() function to sort our list of tuples:
+
+sample = [(1, 7, 3), (4, 9, 6), (7, 3, 9)]
+print(sorted(sample, key=itemgetter(1)))
+ 
+# Output : [(7, 3, 9), (1, 7, 3), (4, 9, 6)]
+In the same way that we saw in earlier instances, the second member of each tuple is utilized to sort the list of tuples
+
+Using Two Elements to Sort a List of Tuples
+So far, we've seen how to specify a single sort element. When you want to sort tuples in Python, you can also specify two or more elements to be used for comparison.
+
+We'll still use the optional key argument as well as a lambda function. Let's pretend we want to sort the list by each tuple's second and third elements.
+
+We can use a lambda to return a tuple of two values that define the position of the elements to be used for sorting, when given a tuple as input.
+
+sample = [(2, 4, 7), (3, 0, 1), (3, 0, 0)]
+print(sorted(sample, key=lambda x: (x[1], x[2])))
+ 
+# Output : [(3, 0, 0), (3, 0, 1), (2, 4, 7)]
+The tuples in the list are sorted by the second element and then by the third element. If we reversed the order of elements defined in the lambda, the elements would be sorted by the second element and then by the third element.
+
+In Python, Sorting a List of Tuples Is Easy
+Sorting a list of tuples may seem challenging, but the opposite is true in Python. Python comes with everything you need to sort lists of tuples without writing your own sorting functions. It is just a matter of defining the key function, which computes the sorting value. You’ve successfully learned sorting in Python – specifically, sorting lists of tuples in Python using several different methods.
+
+Tags:
+
+Python
+Sorting
+You may also like
+slide 5 to 7 of 6
+
+Python Lists, Tuples, and Sets: What’s the Difference?
+Go through Python lists, tuples, and sets to explore the similarities and differences of these data structures. Code examples included!
+Read more
+
+How to Sort a List Alphabetically in Python
+Discover how to sort a list alphabetically in Python using its built-in sort functions. We also look at creating custom sorts.
+Read more
+
+How to Write Custom Sort Functions in Python
+Discover how to write custom sort functions in Python, create a custom order in Python, and perform comparisons in Python.
+Read more
+
+How to Read a CSV File Into a List in Python
+Do you need to work with CSV files? Read and process CSV files in Python. You can do any summary you want!
+Read more
+
+Lists and List Comprehension in Python
+Want to learn how to create a list and use list comprehension in Python? Here's how.
+Read more
+ 
+
+Array vs. List in Python – What's the Difference?
+Python lists and arrays are both used to store data in a mutable and ordered format. So, what's the difference? When should you use a Python array vs. a list?
+Read more
+ 
+
+Python Lists, Tuples, and Sets: What’s the Difference?
+Go through Python lists, tuples, and sets to explore the similarities and differences of these data structures. Code examples included!
+Read more
+ 
+
+How to Sort a List Alphabetically in Python
+Discover how to sort a list alphabetically in Python using its built-in sort functions. We also look at creating custom sorts.
+Read more
+ 
+
+How to Write Custom Sort Functions in Python
+Discover how to write custom sort functions in Python, create a custom order in Python, and perform comparisons in Python.
+Read more
+ 
+
+How to Read a CSV File Into a List in Python
+Do you need to work with CSV files? Read and process CSV files in Python. You can do any summary you want!
+Read more
+ 
+
+Lists and List Comprehension in Python
+Want to learn how to create a list and use list comprehension in Python? Here's how.
+Read more
+ 
+
+Array vs. List in Python – What's the Difference?
+Python lists and arrays are both used to store data in a mutable and ordered format. So, what's the difference? When should you use a Python array vs. a list?
+Read more
+
+Python Lists, Tuples, and Sets: What’s the Difference?
+Go through Python lists, tuples, and sets to explore the similarities and differences of these data structures. Code examples included!
+Read more
+
+How to Sort a List Alphabetically in Python
+Discover how to sort a list alphabetically in Python using its built-in sort functions. We also look at creating custom sorts.
+Read more
+
+How to Write Custom Sort Functions in Python
+Discover how to write custom sort functions in Python, create a custom order in Python, and perform comparisons in Python.
+Read more
+
+How to Read a CSV File Into a List in Python
+Do you need to work with CSV files? Read and process CSV files in Python. You can do any summary you want!
+Read more
+Subscribe to our newsletter
+Join our monthly newsletter to be
+notified about the latest posts.
+ 
+ Email address
+
+How Do You Write a SELECT Statement in SQL?
+
+
+What Is a Foreign Key in SQL?
+
+
+Enumerate and Explain All the Basic Elements of an SQL Query
+
+Quick links
+Pricing
+Blog
+Vertabelo.com
+Assistance
+Need assistance? Drop us a line at contact@learnpython.com
+
+Write to us
+Follow us
+go to top
+Copyright ©2016-2023 Vertabelo SA All rights reserved
+Vertabelo
+Terms of service
+Privacy policy
+Imprint

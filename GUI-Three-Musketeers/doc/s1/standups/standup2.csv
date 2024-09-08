@@ -1,0 +1,6 @@
+Date, Sprint #, Standup #, Name, What did you work on since the last standup?, What do you commit to next?, When do you think you'll be done?, Do you have any blockers?
+Nov 28th,1,2,Jonathan,Converting ThreeMusketeers.java to fit random mode options.,Adding abstract classes and interfaces for the random mode option to use.,End of Today,None
+Nov 29th,1,2,Sandra,Implemented a JavaFX window with countdown timer but was not able to make it actually launch,Fixing the broken JavaFX window to make it launch,5PM Today,making a non-JavaFX window launch a JavaFX application is still hard and my code doesn't work even though it's doing the same thing as every working example I can find (but I did manage to fix my program so it was actually loading JavaFX properly bringing this closer to functionality)
+Nov 29th,1,2,Zoya,Created the BoardComponent interface.,Implementing the changeColor() methods in both the Cell and Board classes depending on whether we use a GUI.,End of Today, None
+Nov 28th,1,2,Safa,I found the right sound to add to the game for whenever a player moves, Create the Singleton Class and find the right spot in the game to play the sound., End of Today, None
+

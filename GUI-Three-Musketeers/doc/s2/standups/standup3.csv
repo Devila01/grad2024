@@ -1,0 +1,6 @@
+Date, Sprint #, Standup #, Name, What did you work on since the last standup?, What do you commit to next?, When do you think you'll be done?, Do you have any blockers?
+Dec 5th,2,3,Jonathan,Finished testing randomMode option, Presentation for presentation day,end of today,None
+Dec 5th,2,3,Safa,Fixed the implementation for sound so that it only plays once on each move, Presentation slides,Noon tomorrow,No
+Dec 4th,2,3,Zoya,Implemented code that checks the username and birth year that the user enters.,Writing the method that stores the user data into a txt.file,Dec 5,None
+Dec 6th,2,3,Sandra,Tried to implement the Timer feature with a GUI built on the startup GUI but scrapped the GUI for the timer entirely,implementing the timer with no GUI,Tonight,the core logic of the program is not amenable to a timer interrupting it
+,,,,,,,

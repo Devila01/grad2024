@@ -1,0 +1,4 @@
+Date, Sprint #, Standup #, Name, What did you work on since the last standup?, What do you commit to next?, When do you think you'll be done?, Do you have any blockers?
+Dec 6,2,4,Sandra,Tried one last time to make the timer work this time with no GUI but ultimately scrapped the feature,N/A,N/A,the timer making a forced move and printing to the console at inopportune times completely disrupted the program's core I/O loop and caused crashes and generally proved detrimental to the user experience
+Dec 6,2,4,Zoya,Worked on the powerpoint slides along with the rest of my group members.,Nothing,Dec 5th 5pm,None.
+,,,,,,,

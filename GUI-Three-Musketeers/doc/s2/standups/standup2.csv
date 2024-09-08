@@ -1,0 +1,5 @@
+Date, Sprint #, Standup #, Name, What did you work on since the last standup?, What do you commit to next?, When do you think you'll be done?, Do you have any blockers?
+Dec 5th,2,2,Jonathan,Completed changeAgent method and added the randomMode option to menu, finish testing randomMode option,Today ,None
+Dec 5th,2,2,Safa,Implemented call on SingletonSound in Move() in Board.java,I need to fix the way the audio gets called because GreedyAgent calls Move many times and it ends up making a horrible noise,This evening,None
+Dec 3rd,2,2,Zoya,Made View.java and Menu.java classes that create a GUI which allows the user to enter their username and birth year before starting the game.,Storing the user data into a txt file so that player can see their game win/lose ratio.,Dec 5, Not any problems with the code itself but faced some issues with pushing the code onto github.
+Dec 5th,2,2,Sandra,Finished implementing the redo feature,making the timer window actually launch,Monday,JavaFX is extremely complicated and this task has always been harder than expected in the past.

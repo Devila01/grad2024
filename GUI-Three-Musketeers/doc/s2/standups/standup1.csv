@@ -1,0 +1,5 @@
+Date, Sprint #, Standup #, Name, What did you work on since the last standup?, What do you commit to next?, When do you think you'll be done?, Do you have any blockers?
+Dec 2nd,2,1,Zoya,Changed the design pattern that I was originally going to implement as it would not be possible without creating a new board GUI. Decided to instead use the facade pattern to create a GUI window that shows up at the start of the game.,Implementing this starting window GUI,Dec 5, None
+Dec 3rd,2,1,Safa,Fixed the audio type from .mp3 to .wav since it wasn't compatible with I/O so now the class is functional,I want to finish this feature so that the sound plays each time in game, Today ,None
+Dec 4th,2,1,Jonathan,completed getRandomizedAgent and setRandomizedAgent for random mode option, work on changeAgent method and finish concreteFactory class, Today, None
+Dec 3rd,2,1,Sandra,fixed issues caused by merging one branch into another and overwriting work,finishing the implementation of the redo feature,saturday,None

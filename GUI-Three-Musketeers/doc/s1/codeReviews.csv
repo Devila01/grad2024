@@ -1,0 +1,5 @@
+Story Reviewed, Name, Reviewer, Pull Request Link, Brief Summary of Comments
+DEV-11,Random Mode Button,Sandra,https://github.com/UTMCSC207/assignment3-javadoc-tor-s/pull/1,Overwrote changes I made to ThreeMusketeers.java (but I've still got it saved locally and can fix that next sprint)
+DEV-22, Change Board Colour, Safa, https://github.com/UTMCSC207/assignment3-javadoc-tor-s/pull/2, some of the commits were pushed to the master branch and don't show in this pull request which will be improved upon in the future
+DEV-23, Game Sound Effect , Zoya, https://github.com/UTMCSC207/assignment3-javadoc-tor-s/pull/3, Does not automatically play a sound when game is run -> SingletonSound class needs to be called on from the Three Musketeers class
+DEV-25, Game Timer, Jonathan, https://github.com/UTMCSC207/assignment3-javadoc-tor-s/pull/4, Timer is currently blank and has nothing inside it. As timer is not shown -> timer is also not being changed as a turn progresses.
